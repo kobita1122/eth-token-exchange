@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ETH-DEX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="swap-container">
+        <header>
+            <h2>🦄 Simple Swap</h2>
+            <button id="connectBtn">Connect Wallet</button>
+        </header>
+
+        <div class="swap-box">
+            <div class="input-group">
+                <label>You Pay (ETH)</label>
+                <input type="number" id="buyInput" placeholder="0.0">
+            </div>
+            <div class="arrow">↓</div>
+            <div class="input-group">
+                <label>You Receive (DEX)</label>
+                <input type="number" id="buyOutput" placeholder="0.0" disabled>
+            </div>
+            <button id="buyBtn" class="action-btn">Swap ETH to DEX</button>
+        </div>
+
+        <div class="divider">OR</div>
+
+        <div class="swap-box">
+            <div class="input-group">
+                <label>You Sell (DEX)</label>
+                <input type="number" id="sellInput" placeholder="0.0">
+            </div>
+            <button id="approveBtn" class="secondary-btn">1. Approve DEX</button>
+            <button id="sellBtn" class="action-btn" disabled>2. Swap DEX to ETH</button>
+        </div>
+        
+        <div id="status"></div>
+    </div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
